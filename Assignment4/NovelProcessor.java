@@ -6,12 +6,6 @@ import java.util.regex.Pattern;
 
 public class NovelProcessor 
 {
-    //default constructor
-    public NovelProcessor()
-    {
-
-    }
-
     public static HashMap <String, Integer> regexMap(String novel, String regex) throws IOException
     {
         String line = "";
