@@ -31,7 +31,7 @@ public class NovelProcessor
                 }
             }
         }
-            return count;
+        return count;
     }
 
     public static void outputFile( HashMap<String,Integer> appearanceMap, String fileName) throws IOException
