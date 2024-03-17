@@ -16,14 +16,14 @@ public class NovelProcessor
     {
         String line = "";
         HashMap <String, Integer> count = new HashMap <String,Integer>();
-        try (BufferedReader novelReader = new BufferedReader(new FileReader(novel))) {
+        try (BufferedReader novelReader = new BufferedReader(new FileReader(novel))) 
+        {
             while((line = novelReader.readLine()) != null)
             {
                 for(String regexString : count.keySet())
                 {
                     Pattern pattern = Pattern.compile(regexString, Pattern.CASE_INSENSITIVE);
                     Matcher matcher= pattern.matcher(line);
-
                     while(matcher.find())
                     {
                         count.put(regexString, count.get(regexString)+1);
@@ -31,25 +31,23 @@ public class NovelProcessor
                 }
             }
         }
-
             return count;
     }
 
     public static void outputFile( HashMap<String,Integer> appearanceMap, String fileName) throws IOException
     {
-        PrintWriter outputWriter = new PrintWriter(new FileWriter(fileName.replaceAll(".txt","_wc.txt")));
-            
+        PrintWriter outputWriter = new PrintWriter(new FileWriter(fileName.replaceAll(".txt","_wc.txt")));     
         for( HashMap.Entry<String, Integer> entry : appearanceMap.entrySet())
         {           
             outputWriter.println(entry.getKey() + "| " + entry.getValue());
         }
-          
          outputWriter.close();    
     }
 
     public static void main(String[]args) throws IOException
     {
-        try (Scanner scan = new Scanner(System.in)) {
+        try (Scanner scan = new Scanner(System.in)) 
+        {
             System.out.println("Enter novel: ");
             String novel = (scan.next());
             System.out.println("Enter regex: ");
