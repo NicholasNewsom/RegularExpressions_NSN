@@ -1,7 +1,7 @@
-\bgloom(y|ier|iness|iest|ily|s)?\b
-\bhaunt(s|ed|ing(ly)?)?\b
+\bgloom(y|ier|iness|iest|ily|ing|s)?\b
+\bhaunt(s|er|ed|ing(ly)?)?\b
 \bmyster(y|ies|ious(ly)?)\b
 \bforbod(ing|e|ed|es)\b
-\bmelanchol(ic|y)\b
+\bmelanchol(ic|ia|y)\b
 \bterror(s|iz(ing|e|ed|es)?|ist)?\b
 \bdesolat(e(s|d)?|ing|ion)\b
